@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Siffredi - Portfolio Académique</title>
+    <title>Emma Siffredi - Portfolio</title>
     <link rel="icon" type="image/png" href="image/FAVICON.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,6 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html#projects" class="nav-link">Mes projets</a></li>
-                <li><a href="amelioration.html" class="nav-link">Mon amélioration</a></li>
                 <li><a href="apropos.html" class="nav-link">À propos</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -46,9 +45,8 @@
                     <span class="landing-tag">Live Twitch</span>
                 </div>
                 <div class="landing-tags-right">
-                    <span class="competence-badge concevoir">Concevoir</span>
-                    <span class="competence-badge exprimer">Exprimer</span>
-                    <span class="competence-badge entreprendre">Entreprendre</span>
+                    <span class="competence-badge communication">Communication</span>
+                    <span class="competence-badge université">Université</span>
                 </div>
             </div>
         </div>
@@ -61,11 +59,7 @@
             <div class="context-list">
                 <div class="context-item">
                     <span class="context-label">Année</span>
-                    <span class="context-value">BUT MMI 2 - semestre 3 - 2024</span>
-                </div>
-                <div class="context-item">
-                    <span class="context-label">Contexte</span>
-                    <span class="context-value">SAE 3.02</span>
+                    <span class="context-value">BUT MMI 2 - 2024</span>
                 </div>
                 <div class="context-item">
                     <span class="context-label">Objectif</span>
@@ -114,30 +108,30 @@
                     <div class="production-text">
                         <h3 class="subtitle">Élaboration d’éléments graphiques :</h3>
                         <p class="basic-text">
-                            Tout d’abord, j’ai effectué la mise en page du règlement des jeux qui a été distribué aux joueurs en respectant la charte graphique établie. Néanmoins, mon rôle principal fut de produire toute la signalétique pour le jour J. J’ai dû trouver des solutions adéquates pour pouvoir allier impact visuel et l'optimisation des ressources. Pour ce faire, j’ai créé différents types de panneaux.
+                            Tout d’abord, j’ai effectué la mise en page du règlement des jeux qui a été distribué aux joueurs en respectant la charte graphique établie. Néanmoins, mon rôle principal fut de produire toute la signalétique pour le jour de l'événement. J’ai dû trouver des solutions adéquates pour pouvoir allier impact visuel et l'optimisation des ressources. Pour ce faire, j’ai créé différents types de panneaux.
                         </p>
                         <p class="difficulty">
                             <img class="lightning" src="image/eclair.svg" alt="éclair">Lors de la mise en place des panneaux, j’ai été confrontée à une contrainte technique avec  l'impression des panneaux de signalétique dans un sens unique, ce qui a nécessité une adaptation immédiate pour assurer le guidage des visiteurs.
                         </p>
                         <div class="production-skills">
-                            <span class="competence-badge exprimer">Exprimer</span>
                             <span class="logiciels">Logiciels utilisés : Illustrator, Figma</span>
                         </div>
                     </div>
-                    <div class="image-legend">
-                        <div class="prod-image prod-image-legend"><img src="image/mmi-lan/signal-1.jpg" alt="panneaux signalétique 1">
+                    <div class="carousel-container-50">
+                        <div class="carousel-track">
+                            <div class="carousel-slide-3"><img src="image/mmi-lan/signal-1.jpg" alt="signalétique 1"></div>
+                            <div class="carousel-slide-3"><img src="image/mmi-lan/signal-2.jpg" alt="signalétique 2"></div>
+                            <div class="carousel-slide-3"><img src="image/mmi-lan/signal-3.jpg" alt="signalétique 3"></div>
                         </div>
-                        <p class="legend">Des panneaux avec des messages ludiques situés dès l’entrée du bâtiment, conçus pour inciter les visiteurs à monter jusqu’au septième étage afin de découvrir les différents stands de jeux.</p>
-                    </div>
-                </div>
-                <div class="production-gallery production-gallery-2col">
-                    <div>
-                        <div class="prod-image"><img src="image/mmi-lan/signal-2.jpg" alt="panneaux signalétique 2"></div>
-                        <p class="legend">Des panneaux plus sobres, destinés à indiquer clairement les stands et la buvette. Malgré leur simplicité, ces panneaux restaient en harmonie avec l’identité visuelle de la MMI LAN.</p>
-                    </div>
-                    <div>
-                        <div class="prod-image"><img src="image/mmi-lan/signal-3.jpg" alt="panneaux signalétique 3"></div>
-                        <p class="legend">Des panneaux pour indiquer le sens de circulation dans la salle principale.</p>
+
+                        <button class="carousel-arrow prev-arrow" aria-label="Précédent">&#10094;</button>
+                        <button class="carousel-arrow next-arrow" aria-label="Suivant">&#10095;</button>
+
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,18 +140,16 @@
             <!-- Production Block 4 -->
             <div class="production-block">
                 <div class="production-content">
+                    <div class="prod-image"><img src="image/mmi-lan/plan_salle.jpg" alt="Plan de la salle FA300">
+                    </div>
                     <div class="production-text">
                         <h3 class="subtitle">Organisation de la salle :</h3>
                         <p class="basic-text">
                             Ensuite, nous avons élaboré un plan détaillé de la salle FA300, dans laquelle se déroulait l'événement, pour parer toute éventualité. Le groupe était composé d’une personne de chaque pôle, et je représentais l’organisation événementielle. Cette configuration nous a permis de créer deux espaces distincts : l’un dédié aux joueurs et casters, et l’autre exclusivement réservé à la régie.
                         </p>
                         <div class="production-skills">
-                            <span class="competence-badge concevoir">Concevoir</span>
-                            <span class="competence-badge entreprendre">Entreprendre</span>
                             <span class="logiciels">Logiciels utilisés : Figma</span>
                         </div>
-                    </div>
-                    <div class="prod-image"><img src="image/mmi-lan/plan_salle.jpg" alt="Plan de la salle FA300">
                     </div>
                 </div>
             </div>   
@@ -165,11 +157,6 @@
             <!-- Production Block 5 -->
             <div class="production-block">
                 <div class="production-content">
-                    <div class="image-legend">
-                        <div class="prod-image prod-image-legend"><img src="image/mmi-lan/conducteur_evenement.jpg" alt="extrait fiche conducteur">
-                        </div>
-                        <p class="legend">Extrait du fil conducteur</p>
-                    </div>
                     <div class="production-text">
                         <h3 class="subtitle">Mon rôle le jour J :</h3>
                         <p class="basic-text">
@@ -177,10 +164,11 @@
 
                             <p class="basic-text">Mon rôle incluait également la communication interne entre les différentes parties de la régie, notamment avec Elouan Chaudun et Gabriel Vareille, afin d’assurer une parfaite synchronisation des overlays avec l’image diffusée à l’écran. Par ailleurs, j’ai géré une partie de la communication externe, uniquement pour intégrer les happenings au planning, tandis que Lana s’occupait de la communication externe globale.</p>
                         </p> 
-                        <div class="production-skills">
-                            <span class="competence-badge concevoir">Concevoir</span>
-                            <span class="competence-badge entreprendre">Entreprendre</span>
+                    </div>
+                    <div class="image-legend">
+                        <div class="prod-image prod-image-legend"><img src="image/mmi-lan/conducteur_evenement.jpg" alt="extrait fiche conducteur">
                         </div>
+                        <p class="legend">Extrait du fil conducteur</p>
                     </div>
                 </div>
             </div>  
@@ -188,42 +176,19 @@
             <!-- Production Block 6 -->
             <div class="production-block">
                 <div class="production-content">
+                    <div class="image-legend">
+                        <div class="prod-image prod-image-legend">
+                            <a href="https://www.nicematin.com/societe/vie-locale/les-etudiants-gamers-mettent-l-iut-de-toulon-sur-twitch-964007" class="context-link" target="_blank" rel="noopener noreferrer"><img src="image/mmi-lan/photo_journal.jpg" alt="photo du journal"></a>
+                        </div>
+                    </div>
                     <div class="production-text">
                         <h3 class="subtitle">Après l'événement :</h3>
                         <p class="basic-text">
-                            Une fois l'événement passé, nous devions préparer notre soutenance commune et un dossier de projet. Dans ce document, nous devions mettre en avant les différentes étapes de notre processus de production, en justifiant nos choix et en analysant les résultats obtenus. J’ai pris en charge la rédaction de la partie dédiée à l’organisation de l’événement, ainsi que celle sur la signalétique. J'ai également contribué à la relecture globale du dossier. 
+                            Une fois l'événement passé, j'ai eu la chance d'apparaître dans le journal local, aux côtés de la table régie.
                         </p>
-                        <div class="production-skills">
-                            <span class="competence-badge exprimer">Exprimer</span>
-                            <span class="competence-badge entreprendre">Entreprendre</span>
-                        </div>
-                    </div>
-                    <div class="image-legend">
-                        <div class="prod-image prod-image-legend"><img src="image/mmi-lan/rapport.jpg" alt="extrait du rapport">
-                        </div>
-                        <p class="legend">Extrait du dossier</p>
                     </div>
                 </div>
-            </div>   
-        </div>
-    </section>
-
-
-
-    <!-- Critical Learning Section -->
-    <section class="project-learnings">
-        <div class="project-learnings-container">
-            <div class="production-title-wrapper">
-                <h2>Apprentissages critiques</h2>
-                <div class="production-title-line"></div>
-            </div>
-
-            <p class="basic-text">
-                    L'organisation de la MMI LAN a été un exercice complet de gestion de projet. J’ai mis en place une stratégie en participant à l'élaboration du plan d'action de l'événement, définissant les étapes clé de la planification jusqu'à la mise en œuvre le jour J (<span class="ac-link" data-ac="22.03">AC 22.03</span>). Dans le cadre de la diffusion Twitch, j'ai également participé à la rédaction du fil conducteur et rapport final, qui fut indispensable à la fluidité de l’événement (<span class="ac-link" data-ac="23.01">AC 23.01</span>). 
-
-                        <p>Sur le plan organisationnel, j’ai coordonné les interactions entre les différents pôles du live Twitch (<span class="ac-link" data-ac="25.02">AC 25.02</span>). Enfin, la gestion de la signalétique et du flux de circulation m'a permis de prendre en compte les contraintes juridiques (<span class="ac-link" data-ac="25.06">AC 25.06</span>), notamment les normes de sécurité en établissement recevant du public.</p>
-                </p>
-            </div>
+            </div>  
         </div>
     </section>
 
@@ -249,10 +214,10 @@
     <section class="project-learnings">
         <div class="project-learnings-container">
             <div class="production-title-wrapper">
-                <h2>Améliorations en lien</h2>
+                <h2>Projets similaires</h2>
                 <div class="production-title-line"></div>
             </div>
-             <div class="projects-grid" id="projectsGrid" data-related-ids="2, 3">
+             <div class="projects-grid" id="projectsGrid" data-related-ids="1, 7">
                 <!-- Projects will be inserted here by JavaScript -->
             </div>
         </div>

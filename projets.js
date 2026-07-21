@@ -377,3 +377,72 @@ if (document.readyState === 'loading') {
     // DOM is already loaded
     initializeKusama();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. On cible les carrousels normaux ET tes nouveaux carrousels à 50%
+    const carousels = document.querySelectorAll(".carousel-container, .carousel-container-50");
+
+    carousels.forEach((carousel) => {
+        const track = carousel.querySelector(".carousel-track");
+        if (!track) return;
+
+        // 2. On prend tous les enfants directs (slides), peu importe leur nom de classe
+        const slides = Array.from(track.children);
+        if (slides.length === 0) return;
+
+        const nextBtn = carousel.querySelector(".next-arrow");
+        const prevBtn = carousel.querySelector(".prev-arrow");
+        const dots = Array.from(carousel.querySelectorAll(".dot"));
+
+        let currentIndex = 0;
+        let autoPlayTimer;
+
+        function updateCarousel(index) {
+            if (index >= slides.length) currentIndex = 0;
+            else if (index < 0) currentIndex = slides.length - 1;
+            else currentIndex = index;
+
+            // Déplacement fluide
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Mise à jour des points
+            dots.forEach(dot => dot.classList.remove("active"));
+            if (dots[currentIndex]) dots[currentIndex].classList.add("active");
+        }
+
+        function startAutoPlay() {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = setInterval(() => {
+                updateCarousel(currentIndex + 1);
+            }, 3000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayTimer);
+            startAutoPlay();
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                updateCarousel(currentIndex + 1);
+                resetAutoPlay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                updateCarousel(currentIndex - 1);
+                resetAutoPlay();
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                updateCarousel(index);
+                resetAutoPlay();
+            });
+        });
+
+        startAutoPlay();
+    });
+});

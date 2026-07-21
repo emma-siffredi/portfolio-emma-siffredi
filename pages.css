@@ -1,15 +1,13 @@
 /* ===== COMPETENCE BADGE COLORS ===== */
 :root {
-    --concevoir-bg: #FFD6BC;
-    --concevoir-text: #A24100;
-    --comprendre-bg: #FFD0D3;
-    --comprendre-text: #C00000;
-    --developper-bg: #CFF6D4;
-    --developper-text: #336300;
-    --entreprendre-bg: #BDD7EE;
-    --entreprendre-text: #002060;
-    --exprimer-bg: #FFE699;
-    --exprimer-text: #7C5E00;
+    --alternance-bg: #ffd6bc;
+    --alternance-text: #a24100;
+    --université-bg: #FFD0D3;
+    --université-text: #c00000;
+    --stage-bg: #cff6d4;
+    --stage-text: #336300;
+    --personnel-bg: #BDD7EE;
+    --personnel-text: #002060;
     --blue-dark: #203F94;
     --blue-light: #D5F1FF;
     --pink-dark: #DB3587;
@@ -209,29 +207,39 @@
     display: inline-block;
 }
 
-.competence-badge.concevoir {
-    background: var(--concevoir-bg);
-    color: var(--concevoir-text);
+.competence-badge.alternance {
+    background: var(--alternance-bg);
+    color: var(--alternance-text);
 }
 
-.competence-badge.comprendre {
-    background: var(--comprendre-bg);
-    color: var(--comprendre-text);
+.competence-badge.université {
+    background: var(--université-bg);
+    color: var(--université-text);
 }
 
-.competence-badge.developper {
-    background: var(--developper-bg);
-    color: var(--developper-text);
+.competence-badge.stage {
+    background: var(--stage-bg);
+    color: var(--stage-text);
 }
 
-.competence-badge.entreprendre {
-    background: var(--entreprendre-bg);
-    color: var(--entreprendre-text);
+.competence-badge.personnel {
+    background: var(--personnel-bg);
+    color: var(--personnel-text);
 }
 
-.competence-badge.exprimer {
-    background: var(--exprimer-bg);
-    color: var(--exprimer-text);
+.competence-badge.numérique {
+    background: var(--blue-light);
+    color: var(--blue-dark);
+}
+
+.competence-badge.analogique {
+    background: var(--green-light);
+    color: var(--green-dark);
+}
+
+.competence-badge.communication {
+    background: var(--pink-light);
+    color: var(--pink-dark);
 }
 
 .logiciels {
@@ -495,6 +503,12 @@ html, body {
     max-height: 400px !important;
     max-width: 300px !important;
     width: auto !important;
+}
+
+.img-width {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 3rem;
 }
 
 .production-content {
@@ -1016,6 +1030,160 @@ html, body {
     font-size: 0.8rem;
     margin: 0 1.5rem 1.5rem;
     display: inline-block;
+}
+
+/* ===== CAROUSEL SYSTEM ===== */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container-50 {
+    position: relative;
+    max-width: 100%;
+    width: 50%;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    width: 100%;
+    aspect-ratio: 21/9; /* Aligne le format global (tu peux l'ajuster) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-slide-50{
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 16/9; /* Aligne le format global (tu peux l'ajuster) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.carousel-slide-50 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-slide-3{
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 10/9; /* Aligne le format global (tu peux l'ajuster) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.carousel-slide-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Optionnel : pour donner un fond propre à la slide qui contient l'image entière */
+.carousel-slide.bg-white {
+    background: var(--white); /* Remplacera le fond gris par ton blanc de secours */
+}
+
+
+
+/* Flèches de navigation (Inspirées de tes boutons ronds de la page d'accueil) */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 222, 242, 0.9); /* var(--pink-light) avec opacité */
+    color: var(--blue-dark);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-arrow:hover {
+    background-color: var(--pink-dark);
+    color: var(--white);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow { left: 20px; }
+.next-arrow { right: 20px; }
+
+/* Indicateurs (Petits points bas de carrousel) */
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--pink-dark);
+    transform: scale(1.2);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .prev-arrow { left: 10px; }
+    .next-arrow { right: 10px; }
 }
 
 /* ===== RESPONSIVE ===== */

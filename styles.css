@@ -9,26 +9,22 @@
     --white: #FBFDFF;
     --black: #010D2E;
 
-    --concevoir-bg: #FFD6BC;
-    --concevoir-text: #FC6805;
-    --concevoir-bg-act: #FC6805;
-    --concevoir-text-act: #FFFFFF;
-    --comprendre-bg: #FFD0D3;
-    --comprendre-text: #F10303;
-    --comprendre-bg-act: #F10303;
-    --comprendre-text-act: #FFFFFF;
-    --developper-bg: #C6E0B4;
-    --developper-text: #3B7300;
-    --developper-bg-act: #3B7300;
-    --developper-text-act: #FFFFFF;
-    --entreprendre-bg: #BDD7EE;
-    --entreprendre-text: #002060;
-    --entreprendre-bg-act: #002060;
-    --entreprendre-text-act: #FFFFFF;
-    --exprimer-bg: #FFE699;
-    --exprimer-text: #7C5E00;
-    --exprimer-bg-act: #FFD700;
-    --exprimer-text-act: #000000;
+    --alternance-bg: #ffd6bc;
+    --alternance-text: #a24100;
+    --alternance-bg-act: #fc6805;
+    --alternance-text-act: #FFFFFF;
+    --université-bg: #FFD0D3;
+    --université-text: #c00000;
+    --université-bg-act: #c00000;
+    --université-text-act: #FFFFFF;
+    --stage-bg: #cff6d4;
+    --stage-text: #336300;
+    --stage-bg-act: #3b7300;
+    --stage-text-act: #FFFFFF;
+    --personnel-bg: #BDD7EE;
+    --personnel-text: #002060;
+    --personnel-bg-act: #002060;
+    --personnel-text-act: #FFFFFF;
 }
 
 * {
@@ -446,54 +442,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Couleurs spécifiques pour les compétences */
-.filter-btn[data-filter="Concevoir"] {
-    color: var(--concevoir-text);
-    background-color: var(--concevoir-bg);
+.filter-btn[data-filter="Numérique"] {
+    color: var(--blue-dark);
+    background-color: var(--blue-light);
 }
 
-.filter-btn[data-filter="Concevoir"].active {
-    background: var(--concevoir-bg-act);
-    color: var(--concevoir-text-act);
+.filter-btn[data-filter="Numérique"].active {
+    background: var(--blue-dark);
+    color: var(--blue-light);
 }
 
-.filter-btn[data-filter="Comprendre"] {
-    color: var(--comprendre-text);
-    background-color: var(--comprendre-bg);
+.filter-btn[data-filter="Analogique"] {
+    color: var(--green-dark);
+    background-color: var(--green-light);
 }
 
-.filter-btn[data-filter="Comprendre"].active {
-    background: var(--comprendre-bg-act);
-    color: var(--comprendre-text-act);
+.filter-btn[data-filter="Analogique"].active {
+    background: var(--green-dark);
+    color: var(--green-light);
 }
 
-.filter-btn[data-filter="Développer"] {
-    color: var(--developper-text);
-    background-color: var(--developper-bg);
+.filter-btn[data-filter="Communication"] {
+    color: var(--pink-dark);
+    background-color: var(--pink-light);
 }
 
-.filter-btn[data-filter="Développer"].active {
-    background: var(--developper-bg-act);
-    color: var(--developper-text-act);
-}
-
-.filter-btn[data-filter="Entreprendre"] {
-    color: var(--entreprendre-text);
-    background-color: var(--entreprendre-bg);
-}
-
-.filter-btn[data-filter="Entreprendre"].active {
-    background: var(--entreprendre-bg-act);
-    color: var(--entreprendre-text-act);
-}
-
-.filter-btn[data-filter="Exprimer"] {
-    color: var(--exprimer-text);
-    background-color: var(--exprimer-bg);
-}
-
-.filter-btn[data-filter="Exprimer"].active {
-    background: var(--exprimer-bg-act);
-    color: var(--exprimer-text-act);
+.filter-btn[data-filter="Communication"].active {
+    background: var(--pink-dark);
+    color: var(--pink-light);
 }
 
 /* ===== PROJECTS GRID ===== */
@@ -914,247 +890,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ===== IMPROVEMENTS PAGE (amelioration.html) ===== */
-
-/* Competence Filter Buttons */
-.competence-filters {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 3rem 0;
-}
-
-.competence-filter-btn {
-    padding: 0.8rem 1.5rem;
-    border: 0px solid var(--black);
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 110%;
-    letter-spacing: -0.32px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Color mapping for each competence */
-.competence-filter-btn.comprendre {
-    color: var(--comprendre-text);
-    background-color: var(--comprendre-bg);
-}
-
-.competence-filter-btn.comprendre.active {
-    --button-color: var(--comprendre-bg-act);
-    color: var(--comprendre-text-act);
-}
-
-.competence-filter-btn.concevoir {
-    color: var(--concevoir-text);
-    background-color: var(--concevoir-bg);
-}
-
-.competence-filter-btn.concevoir.active {
-    --button-color: var(--concevoir-bg-act);
-    color: var(--concevoir-text-act);
-}
-
-.competence-filter-btn.exprimer {
-    color: var(--exprimer-text);
-    background-color: var(--exprimer-bg);
-}
-
-.competence-filter-btn.exprimer.active {
-    --button-color: var(--exprimer-bg-act);
-    color: var(--exprimer-text-act);
-}
-
-.competence-filter-btn.developper {
-    color: var(--developper-text);
-    background-color: var(--developper-bg);
-}
-
-.competence-filter-btn.developper.active {
-    --button-color: var(--developper-bg-act);
-    color: var(--developper-text-act);
-}
-
-.competence-filter-btn.entreprendre {
-    color: var(--entreprendre-text);
-    background-color: var(--entreprendre-bg);
-}
-
-.competence-filter-btn.entreprendre.active {
-    --button-color: var(--entreprendre-bg-act);
-    color: var(--entreprendre-text-act);
-}
-
-.competence-filter-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(1, 13, 46, 0.2);
-}
-
-.competence-filter-btn.active {
-    background-color: var(--button-color);
-    color: white;
-    transform: scale(1.05);
-}
-
-/* Competence Content */
-.competence-content-area {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.competence-content {
-    display: none;
-}
-
-.competence-content.active {
-    display: block;
-    animation: fadeIn 0.5s ease-in forwards;
-}
-
-.competence-content.fade-out {
-    animation: fadeOut 0.3s ease-out forwards;
-}
-
-.competence-text {
-    flex: 1;
-    min-width: 0;
-}
-
-.competence-text p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--black);
-    margin-bottom: 1.2rem;
-    text-align: justify;
-}
-
-/* Layout: Text + Sliders side by side */
-.competence-layout {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-}
-
-.competence-sliders {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--blue-light);
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-/* Slider Item */
-.slider-item {
-    margin-bottom: 2rem;
-    background-color: white;
-    border-radius: 15px;
-    padding: 1rem;
-}
-
-.slider-item:last-child {
-    margin-bottom: 0;
-}
-
-.slider-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.8rem;
-}
-
-.slider-label {
-    font-weight: 600;
-    color: var(--blue-dark);
-    font-size: 0.95rem;
-}
-
-.slider-percentage {
-    font-weight: 700;
-    color: var(--blue-dark);
-    font-size: 1rem;
-}
-
-/* Slider Bar */
-.slider-bar {
-    width: 100%;
-    height: 20px;
-    background-color: #FFE4F0;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider-bar::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: var(--percentage, 0%);
-    border-radius: 10px;
-    background-color: currentColor;
-}
-
-/* Réinitialisation des sliders à 0% */
-.slider-bar.reset::before {
-    width: 0% !important;
-}
-
-/* Transition de remplissage des sliders */
-.slider-bar.animate::before {
-    transition: width 0.8s ease-out 0.4s;
-}
-
-/* Color variants for different competences */
-.comprendre-slider {
-    background-color: var(--comprendre-bg);
-    color: var(--comprendre-bg-act);
-}
-
-.comprendre-slider::before {
-    background-color: var(--comprendre-bg-act);
-}
-
-.concevoir-slider {
-    background-color: var(--concevoir-bg);
-    color: var(--concevoir-bg-act);
-}
-
-.concevoir-slider::before {
-    background-color: var(--concevoir-bg-act);
-}
-
-.exprimer-slider {
-    background-color: var(--exprimer-bg);
-    color: var(--exprimer-bg-act);
-}
-
-.exprimer-slider::before {
-    background-color: var(--exprimer-bg-act);
-}
-
-.developper-slider {
-    background-color: var(--developper-bg);
-    color: var(--developper-bg-act);
-}
-
-.developper-slider::before {
-    background-color: var(--developper-bg-act);
-}
-
-.entreprendre-slider {
-    background-color: var(--entreprendre-bg);
-    color: var(--entreprendre-bg-act);
-}
-
-.entreprendre-slider::before {
-    background-color: var(--entreprendre-bg-act);
-}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -1621,5 +1356,230 @@ h1, h2, h3, h4, h5, h6 {
 
     .slider-percentage {
         font-size: 0.9rem;
+    }
+}
+
+/* ==========================================================================
+   CHRONOLOGIE SYSTEME (LIGNE SIMPLE & ÉTOILE AJUSTÉE)
+   ========================================================================== */
+
+.timeline-section {
+    padding-top: 3rem;
+    margin-top: 2rem;
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 8rem auto 8rem auto; /* Laisse l'espace pour les boîtes en haut et en bas */
+    padding: 2rem 0;
+}
+
+/* Ligne centrale de la frise */
+.timeline-line-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.timeline-svg .main-line {
+    stroke: var(--pink-light); /* Utilise ton rose clair de variable */
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Déclenchement de l'animation de la ligne */
+.timeline-container.visible .main-line {
+    stroke-dashoffset: 0;
+}
+
+/* Grille principale des événements (7 colonnes sur ordinateur) */
+.timeline-events {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 40px; /* Alignement strict : même hauteur que l'axe de la ligne */
+}
+
+/* Conteneur individuel d'une étape */
+.timeline-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; 
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Déclenchement de l'animation des éléments (géré par le JS) */
+.timeline-item.animate-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Pastille blanche pour isoler l'étoile au milieu de la ligne */
+.timeline-star-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Taille globale réduite de la zone */
+    height: 24px;
+    background: var(--white); /* Masque le morceau de ligne juste sous l'étoile */
+    z-index: 5;
+    border-radius: 50%;
+}
+
+/* Ta véritable image d'étoile réduite élégamment */
+.timeline-star-img {
+    width: 18px; /* Taille d'affichage discrète */
+    height: 18px;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animation de rotation au survol de la souris */
+.timeline-item:hover .timeline-star-img {
+    transform: scale(1.2) rotate(72deg);
+}
+
+/* Style général des boîtes textuelles (cartes de compétences) */
+.timeline-card {
+    position: absolute;
+    width: 150%;
+    background: #D5F1FF; /* Correspond à ta variable --blue-light */
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
+
+/* Positionnement absolu : Cartes du Haut poussées au-dessus de la ligne */
+.timeline-item.up .timeline-card {
+    bottom: 55px;
+}
+
+/* Positionnement absolu : Cartes du Bas poussées en-dessous de la ligne */
+.timeline-item.down .timeline-card {
+    top: 55px;
+}
+
+/* Effets au survol de la carte (Basculement vers la couleur rose clair) */
+.timeline-card:hover {
+    transform: translateY(calc(var(--dir, -1) * 5px));
+    box-shadow: 0 10px 25px rgba(32, 63, 148, 0.15); /* Basé sur --blue-dark */
+    background-color: var(--pink-light);
+}
+
+.timeline-item.up .timeline-card:hover { --dir: -1; }
+.timeline-item.down .timeline-card:hover { --dir: 1; }
+
+/* Typographies internes des cartes */
+.timeline-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--blue-dark);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-card .institution {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-card .date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--pink-dark);
+}
+
+/* ==========================================================================
+   MODE RESPONSIVE MOBILES & TABLETTES (Moins de 900px)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .timeline-container {
+        margin: 0rem auto 0rem auto;
+    }
+    
+    /* Masquage de l'axe SVG horizontal */
+    .timeline-line-wrapper { 
+        display: none; 
+    }
+    
+    /* Transformation de la grille horizontale en liste verticale flexible */
+    .timeline-events {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 20px;
+        border-left: 3px solid var(--pink-light); /* Ligne verticale de secours */
+        height: auto;
+    }
+    
+    /* Ré-alignement des blocs en ligne verticale */
+    .timeline-item.up, 
+    .timeline-item.down {
+        display: flex;
+        flex-direction: row !important; /* On force une disposition en ligne côte à côte */
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        transform: scale(0.8) translateX(-20px);
+        text-decoration: none;
+    }
+    
+    .timeline-item.up.animate-in, 
+    .timeline-item.down.animate-in {
+        transform: scale(1) translateX(0);
+    }
+    
+    /* 🌟 LE CORRECTIF : On force l'ordre d'affichage visuel sur mobile */
+    .timeline-star-wrapper {
+        order: 1 !important; /* Force TOUTES les étoiles à être le premier élément (à gauche) */
+        margin-right: 15px;
+        margin-left: -33px;  /* Pile centré sur la ligne de gauche */
+        background: var(--white);
+        padding: 2px;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;      /* Empêche l'étoile de se déformer */
+    }
+    
+    .timeline-card {
+        order: 2 !important; /* Force TOUTES les cartes à être le deuxième élément (à droite) */
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        width: 100%;
+    }
+    
+    .timeline-card:hover {
+        transform: translateY(-5px) !important;
     }
 }

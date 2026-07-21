@@ -314,3 +314,46 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+
+// ===== ANIMATION CHRONOLOGIE AU SCROLL =====
+function initTimelineAnimation() {
+    const timelineContainer = document.querySelector('.timeline-container');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    if (!timelineContainer) return; // Sécurité si on n'est pas sur la page à propos
+
+    // Options du capteur de défilement (déclenche quand 20% de la section est visible)
+    const observerOptions = {
+        root: null,
+        threshold: 0.2
+    };
+
+    const timelineObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 1. On lance l'apparition et le tracé de la ligne SVG
+                timelineContainer.classList.add('visible');
+
+                // 2. On fait apparaître les cartes l'une après l'autre de gauche à droite
+                // Le délai commence après le début du tracé de la ligne (ex: 400ms)
+                timelineItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('animate-in');
+                    }, 400 + (index * 250)); // 250ms d'intervalle entre chaque élément pour l'effet de cascade
+                });
+
+                // Une fois animé, on arrête de surveiller pour garder la frise affichée
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    timelineObserver.observe(timelineContainer);
+}
+
+// Lancement du script
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTimelineAnimation);
+} else {
+    initTimelineAnimation();
+}
