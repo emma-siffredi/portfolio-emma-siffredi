@@ -1210,7 +1210,7 @@ html, body {
     }
 
     .subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .production-content {
@@ -1280,12 +1280,6 @@ html, body {
         padding-bottom: 0;
         border-bottom: none;
     }
-
-    .context-label,
-    .context-value {
-        font-size: 0.95rem;
-    }
-
     .context-intro {
         font-size: 0.95rem;
     }
@@ -1400,11 +1394,6 @@ html, body {
     .logiciels,
     .software-badge {
         font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    .competence-badge {
-        font-size: 0.75rem;
     }
 
     .context-item {
@@ -1424,11 +1413,6 @@ html, body {
         margin-bottom: 1.5rem;
     }
 
-    .context-label,
-    .context-value {
-        font-size: 0.85rem;
-    }
-
     .context-intro {
         font-size: 0.9rem;
     }
@@ -1438,16 +1422,8 @@ html, body {
         margin-left: 0;
     }
 
-    .project-production h2 {
-        font-size: 1.5rem;
-    }
-
     .production-intro {
         font-size: 0.85rem;
-    }
-
-    .subtitle {
-        font-size: 0.95rem;
     }
 
     .production-description {

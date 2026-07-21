@@ -1066,31 +1066,6 @@ h1, h2, h3, h4, h5, h6 {
         gap: 0.8rem;
     }
 
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    .project-title {
-        font-size: 1.1rem;
-    }
-
-    .project-description {
-        font-size: 0.85rem;
-    }
-
-    .project-year {
-        font-size: 0.7rem;
-    }
-
-    .project-category {
-        font-size: 0.75rem;
-    }
-
-    .project-tag {
-        font-size: 0.75rem;
-    }
-
     .nav-links {
         gap: 1rem;
         font-size: 0.9rem;
@@ -1258,11 +1233,6 @@ h1, h2, h3, h4, h5, h6 {
         animation: popIn 0.4s ease-out;
     }
 
-    .filter-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.75rem;
-    }
-
     /* Improvements Page Responsive Mobile */
     .competence-filters {
         gap: 0.5rem;
@@ -1273,8 +1243,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.75rem;
     }
 
-    .project-description {
-        font-size: 0.75rem;
+        .filter-btn {
+        font-size: 0.8rem;
     }
 
     .contact-grid {
@@ -1311,14 +1281,6 @@ h1, h2, h3, h4, h5, h6 {
     .contact-section-full {
         padding: 2rem 1rem;
         min-height: auto;
-    }
-
-    .project-category {
-        font-size: 0.7rem;
-    }
-
-    .project-tag {
-        font-size: 0.7rem;
     }
 
     .logo {
