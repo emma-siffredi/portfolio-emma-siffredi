@@ -14,19 +14,6 @@
       "tags": ["#Médiation", "#Immersion"]
     },
     {
-      "id": "2",
-      "title": "Danse à l'Opéra",
-      "description": "En collaboration avec le lycée Durmont d'Urville, nous avons réalisé un décor numérique dans le but d'accompagner une performance de danse.",
-      "image": "image/DALO/cover_carte.webp",
-      "link": "Danse-opera.html",
-      "domain": "Création Numérique",
-      "domainType": "creation",
-      "competences": ["Numérique"],
-      "year": "BUT 3 MMI",
-      "yearNumber": 3,
-      "tags": ["#Décor Numérique", "#Projection", "#Vidéo"]
-    },
-    {
       "id": "3",
       "title": "Alternance 3BPRO",
       "description": "Les différents éléments de communication visuelle réalisés durant mon alternance en troisième année du BUT MMI, au sein de l'entreprise 3B PRO.",
@@ -90,32 +77,6 @@
       "year": "BUT 1 MMI",
       "yearNumber": 1,
       "tags": ["#Identité visuelle", "#Événementiel", "#Charte Graphique"]
-    },
-    {
-      "id": "8",
-      "title": "L'Ombre - Analyse vidéo",
-      "description": "Production d'une vidéo en 2.5D, avec une analyse d'oeuvre d'art.",
-      "image": "image/ombre/cover_carte.jpg",
-      "link": "ombre.html",
-      "domain": "Création Numérique",
-      "domainType": "creation",
-      "competences": ["Numérique"],
-      "year": "BUT 2 MMI",
-      "yearNumber": 2,
-      "tags": ["#Paralaxe", "#Blender", "#Analyse d'oeuvre"]
-    },
-    {
-      "id": "9",
-      "title": "Shinee",
-      "description": "Shinee : la météo qui donne le smile. Application mobile de météo, incluant une datavisualisation temporelle. ",
-      "image": "image/shinee/cover-page.png",
-      "link": "shinee.html",
-      "domain": "Création Numérique",
-      "domainType": "creation",
-      "competences": ["Numérique"],
-      "year": "BUT 2 MMI",
-      "yearNumber": 2,
-      "tags": ["#Concevoir", "#Application", "#Webdesign"]
     },
     {
       "id": "10",
